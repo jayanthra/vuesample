@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/normalize.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.css">
+	<link rel="stylesheet" href="css/debug.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- COMPONENTS script-->
+	<!-- <div id="app"> 
+		 <wizard :name="hermione" :spell="oculus_reparo"></wizard>
+		<wizard :name="harry" :spell="wingardium_leviosa"></wizard>
+		<wizard :name="ron" :spell="alohomora"></wizard> 
+		<p v-html="alohomora()"></p>
+	</div> -->
+
+	<!-- INTERACTION  sirius-->
+	<!-- <div id="app" :style="{ background: background() }">		
+		<p @click="animagus" v-html="active" :class="breathe()"></p>
+	</div> -->
+
+
+	<!-- <div class="app" :class="theme()">
+		<p>
+			Click the box!<br>
+			The cat's...
+			<span v-html="cat" @click="quantum_fluctuation()" :class="jittering()"></span>
+			!
+		</p>
+	</div> -->
+	<div id="app" :style="gradient(active)">
+		<swatch v-for="swatch in swatches" @click.native="activate(swatch)" :active="active" :swatch="swatch" :effect="gradient"></swatch>
+	</div>
+
+
+	<!-- <script src="./script.js"></script> -->
+	<!-- <script src="./sirius.js"></script> -->
+	<!-- <script src="./schrondinger.js"></script> -->
+	<script src="./colorpicker.js"></script>
+</body>
+
+</html>
